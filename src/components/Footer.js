@@ -26,7 +26,7 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div>
-                    <a href=""><strong>Dev. Michael Forero</strong></a>
+                    <a className="nav-link"href="https://api.whatsapp.com/send?phone=573108854737&text=hola%20"><strong>Dev. Michael Forero</strong></a>
                 </div>
             </div>
         </footer>

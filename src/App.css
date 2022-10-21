@@ -81,6 +81,7 @@ h1,  h5{
 
 .card .btn-primary {
   background: #D1512D;
+  border: none;
 }
 .card{
   margin-top: 10px;

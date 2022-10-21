@@ -9,7 +9,7 @@ import img6 from "../img/galeria/DSCN0504.JPG"
 const galeria = [
     {
         src: img1,
-        caption: 'Commodo commodo dolore',
+        caption: '',
     },
     {
         src: img2,

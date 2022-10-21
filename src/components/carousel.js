@@ -11,10 +11,6 @@ import galeria from '../data/galeria';
           alt={caption}
 
         />
-        <Carousel.Caption>
-          <h3>{caption}</h3>
-          <p>{caption}</p>
-        </Carousel.Caption>
       </Carousel.Item>))}
     </Carousel>
 )}
