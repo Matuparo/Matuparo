@@ -1,9 +1,9 @@
 import React from 'react'
-import Menu from '../components/menu'
 import Typed from "react-typed"
 import RedesSociales from '../components/RedesSociales'
 import GaleriaCarousel from '../components/carousel'
 import Footer from '../components/Footer'
+import ShoppingCart from '../components/shoppingCart'
 
 const Inicio = () => {
   return (<div>
@@ -43,6 +43,7 @@ const Inicio = () => {
         </center>
       </section>
     </div>
+    
   </div >
   )
 }

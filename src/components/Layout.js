@@ -35,7 +35,6 @@ const Layout = () => {
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
-            <RedesSociales />
             <Outlet />
             <Footer />
         </div>

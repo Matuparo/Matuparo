@@ -1,10 +1,10 @@
 import React from 'react'
-import { Button, Card } from 'react-bootstrap'
-import Menu from '../data/Menu'
+import {Card } from 'react-bootstrap'
+
 
 
 const Articulos = ({data, addToCart}) => {
-  let {name, img, description, } = data
+  let {name, img, description } = data
   let amount
     
   return (  

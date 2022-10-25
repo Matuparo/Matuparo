@@ -109,7 +109,11 @@ h1,  h5{
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
+.shoppingCart{
+  position: fixed;
+  right: 1%;
+  top: 10%;
+}
 .App-link {
   color: #61dafb;
 }

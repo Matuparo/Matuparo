@@ -11,7 +11,6 @@ const NoMatch = () => {
       <p>
         <Link to="/">Vuelve al inicio</Link>
       </p>
-      <ShoppingCart/>
     </div>
   );
 }

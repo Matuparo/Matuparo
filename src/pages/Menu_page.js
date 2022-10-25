@@ -1,7 +1,6 @@
 import React from 'react'
-import Menu from '../components/menu'
-import RedesSociales from '../components/RedesSociales'
 import ShoppingCart from '../components/shoppingCart'
+
 
 const Menu_page = () => {
     return (
@@ -12,8 +11,8 @@ const Menu_page = () => {
                         <h1 className='title'> <strong>Menú</strong> </h1>
                     </div>
                 </center>
-                <ShoppingCart/>
             </section>
+               <ShoppingCart/>
         </div>
     )
 }
