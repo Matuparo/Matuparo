@@ -110,10 +110,26 @@ h1,  h5{
   color: white;
 }
 .shoppingCart{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: fixed;
   right: 1%;
-  top: 10%;
+  top: 80%;
 }
+.shoppingCart div{
+  color:aliceblue;
+  position: absolute;
+  right: 1%;
+  top: -15%;
+  background-color: red;
+  padding:0px 5px 0px 5px; 
+  border-radius: 100%;
+}
+table{
+  text-align: center;
+}
+
 .quantity div, h6{
   display:inline;
   margin: 10px;

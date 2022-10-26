@@ -1,6 +1,7 @@
 import { faTrashCan } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
+import { Button } from 'react-bootstrap'
 
 const CartItem = ({ data, delToCart }) => {
   const { name, value, amount, id } = data
@@ -10,7 +11,9 @@ const CartItem = ({ data, delToCart }) => {
       <td>{name}</td>
       <td>{value}</td>
       <td>{value * amount}</td>
-      <button onClick={() => delToCart({id:id})}><FontAwesomeIcon icon={faTrashCan} /></button>
+      <td>
+        <Button variant="danger" onClick={() => delToCart({ id: id })}><FontAwesomeIcon icon={faTrashCan} /></Button>
+      </td>
     </tr>
   )
 }

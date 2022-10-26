@@ -25,7 +25,7 @@ const Articulos = ({ data, addToCart }) => {
           {value ? <Button onClick={() => setvalue(value - 1)}><FontAwesomeIcon icon={faMinus} /></Button> : <></>}
           <h6>{value}</h6>
           <Button onClick={() => setvalue(value + 1)}><FontAwesomeIcon icon={faPlus} /></Button>
-          <Button onClick={() => addToCart({ amount: value, id: data.id })} className="btn-primary">Agregar</Button>
+          <Button variant="success" onClick={() => addToCart({ amount: value, id: data.id })} >Agregar</Button>
         </div>
       </Card.Body>
     </Card>

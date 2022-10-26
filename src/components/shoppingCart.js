@@ -18,8 +18,8 @@ const ShoppingCart = () => {
 
 
     const addToCart = (data) => {
-        console.log(data)
-        dispatch({ type: Types.ADD_TO_CART, payload: data })
+        const { amount } = data
+        amount ? dispatch({ type: Types.ADD_TO_CART, payload: data }) : alert("debes agregar un producto")
 
     }
     const delToCart = (id) => {
@@ -32,7 +32,7 @@ const ShoppingCart = () => {
     return (
         <div>
             <div className='shoppingCart'>
-                <div>{cart.length}</div>
+                {cart.length?<div>{cart.length}</div>:<div></div>}
                 <Button variant="primary" onClick={handleShow} >
                     <FontAwesomeIcon icon={faCartShopping} />
                 </Button>
@@ -53,16 +53,19 @@ const ShoppingCart = () => {
                         <Offcanvas.Title>Carrito de compras</Offcanvas.Title>
                     </Offcanvas.Header>
                     <Offcanvas.Body>
-                        <button className="btn-primary" onClick={() => clearCart(cart)}><FontAwesomeIcon icon={faTrashCan} /> Limpiar Carrito</button>
+                        <Button variant="danger" className="btn-primary" onClick={() => clearCart(cart)}><FontAwesomeIcon icon={faTrashCan} /> Limpiar Carrito</Button>
                         <table>
-                            <tr>
-                                <th>cantidad</th>
-                                <th>descripción</th>
-                                <th>Vr unitario</th>
-                                <th>Vr total</th>
-                            </tr>
-
-                            {cart.map((item, index) => (<CartItem data={item} delToCart={delToCart} key={index} />))}
+                            <thead>
+                                <tr>
+                                    <th>cantidad</th>
+                                    <th>descripción</th>
+                                    <th>Vr unitario</th>
+                                    <th>Vr total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {cart.map((item, index) => (<CartItem data={item} delToCart={delToCart} key={index} />))}
+                            </tbody>
                         </table>
                         {total ? <h3>total {total} $</h3> : <></>}
 
