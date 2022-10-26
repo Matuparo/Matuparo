@@ -32,16 +32,15 @@ export const shoppingReducer = (state, action) => {
 
         }
         case Types.DELETE_ONE: {
-            let delArticle = state.cart.find(item => item.id = action.payload.id)
+            let delArticle = state.cart.find(item => item.id === action.payload.id)
             return delArticle.amount > 1 ? {
                 ...state,
-                cart: state.cart.map(item => item.id === action.payload.id ? { ...item, amount: parseInt(item.amount) - 1 } : item),
+                cart: state.cart.map(item => item.id === delArticle.id ? { ...item, amount: parseInt(item.amount) - 1 } : item),
                 total: state.total - (1 * delArticle.value)
             } : {
                 ...state,
-                cart: state.cart.filter(item => item.id !== action.payload.id),
+                cart: state.cart.filter(item => item.id !== delArticle.id),
                 total: state.total - (1 * delArticle.value)
-
             }
 
         }
