@@ -22,16 +22,17 @@ const ShoppingCart = () => {
         dispatch({ type: Types.ADD_TO_CART, payload: data })
 
     }
-    const delToCart = () => {
-
+    const delToCart = (id) => {
+        dispatch({ type: Types.DELETE_ONE, payload: id })
     }
-    const clearCart = () => {
+    const clearCart = (data) => {
+        dispatch({ type: Types.CLEAN_CART, payload: data })
 
     }
     return (
         <div>
             <div className='shoppingCart'>
-                    <div>{cart.length}</div>
+                <div>{cart.length}</div>
                 <Button variant="primary" onClick={handleShow} >
                     <FontAwesomeIcon icon={faCartShopping} />
                 </Button>
@@ -52,7 +53,7 @@ const ShoppingCart = () => {
                         <Offcanvas.Title>Carrito de compras</Offcanvas.Title>
                     </Offcanvas.Header>
                     <Offcanvas.Body>
-                        <button className="btn-primary" onClick={() => clearCart()}><FontAwesomeIcon icon={faTrashCan} /> Borrar todo</button>
+                        <button className="btn-primary" onClick={() => clearCart(cart)}><FontAwesomeIcon icon={faTrashCan} /> Limpiar Carrito</button>
                         <table>
                             <tr>
                                 <th>cantidad</th>
@@ -61,7 +62,7 @@ const ShoppingCart = () => {
                                 <th>Vr total</th>
                             </tr>
 
-                            {cart.map((item, index) => (<CartItem data={item} deltocart={delToCart} key={index} />))}
+                            {cart.map((item, index) => (<CartItem data={item} delToCart={delToCart} key={index} />))}
                         </table>
                         {total ? <h3>total {total} $</h3> : <></>}
 

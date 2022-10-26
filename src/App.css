@@ -114,6 +114,10 @@ h1,  h5{
   right: 1%;
   top: 10%;
 }
+.quantity div, h6{
+  display:inline;
+  margin: 10px;
+}
 .App-link {
   color: #61dafb;
 }
