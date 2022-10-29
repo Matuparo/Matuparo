@@ -51,7 +51,7 @@ export default [
         id:5,
         img: img5,
         name: "Perro caliente tradicional",
-        value:4500,
+        value:5000,
         description:"Pan artesanal, papa fósforo,salchicha,salsas."
     },
     {
@@ -72,7 +72,7 @@ export default [
         id:8,
         img: img9,
         name: "Salchipapa",
-        value:4500,
+        value:5000,
         description:"Porción de papa a la francesa, salchicha, salsa de tomate."
     },
     {

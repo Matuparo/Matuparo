@@ -30,7 +30,6 @@ const Layout = () => {
                         >
                             <Link to="/"><a className='nav-item nav-link'><strong>Inicio</strong></a></Link>
                             <Link to="menu"><a className='nav-item nav-link'><strong>Menú</strong></a></Link>
-                            <a className='nav-item nav-link' href="#contacto"><strong>Contacto</strong></a>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

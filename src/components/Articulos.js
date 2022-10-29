@@ -6,9 +6,8 @@ import { Button, Card } from 'react-bootstrap'
 
 
 const Articulos = ({ data, addToCart }) => {
-  let { name, img, description } = data
-  let amount
-  const [value, setvalue] = useState(0)
+  let { name, img, description, value } = data
+  const [amount, setamount] = useState(1)
   return (
     <Card style={{ width: '18rem' }}>
       <Card.Header>
@@ -22,10 +21,10 @@ const Articulos = ({ data, addToCart }) => {
           {description}
         </Card.Text>
         <div className='quantity'>
-          {value ? <Button onClick={() => setvalue(value - 1)}><FontAwesomeIcon icon={faMinus} /></Button> : <></>}
-          <h6>{value}</h6>
-          <Button onClick={() => setvalue(value + 1)}><FontAwesomeIcon icon={faPlus} /></Button>
-          <Button variant="success" onClick={() => addToCart({ amount: value, id: data.id })} >Agregar</Button>
+          <Button onClick={() => amount ? setamount(amount - 1) : alert("No se pueden agregar valores negativos")}><FontAwesomeIcon icon={faMinus} /></Button>
+          <h6>{amount}</h6>
+          <Button onClick={() => setamount(amount + 1)}><FontAwesomeIcon icon={faPlus} /></Button>
+          <Button variant="success" onClick={() => addToCart({ amount: amount, id: data.id })} > {amount * value}$</Button>
         </div>
       </Card.Body>
     </Card>

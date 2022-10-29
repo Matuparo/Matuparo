@@ -2,6 +2,7 @@ import { faFacebook, faInstagram, faWhatsapp } from '@fortawesome/free-brands-sv
 import { faMapLocationDot, faMapSigns } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
+import { Link } from 'react-router-dom'
 import contact from '../data/contact'
 
 const Footer = () => {
@@ -20,9 +21,8 @@ const Footer = () => {
                 </div>
                 <div>
                     <ul>
-                        <li><a className='nav-link' href='/menu'><strong>Menú</strong></a></li>
-                        <li><a className='nav-link' href='#galeria'><strong>Galeria</strong></a></li>
-                        <li><a href='/#contacto' className='nav-link' ><strong>Ubicación</strong></a></li>
+                        <li><Link className='nav-link' href='/menu'><strong>Menú</strong></Link></li>
+                        <li><a className='nav-link' href='/#galeria'><strong>Galeria</strong></a></li>
                     </ul>
                 </div>
                 <div>

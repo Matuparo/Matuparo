@@ -2,9 +2,12 @@ import { faCartShopping, faTrashCan } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useReducer, useState } from 'react'
 import { Button, Offcanvas } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 import { Types } from './Actions/shoppingActions'
 import Articulos from './Articulos'
 import CartItem from './CartItem'
+
+
 import { shoppingInitialState, shoppingReducer } from './reducers/shoppingReducers'
 
 const ShoppingCart = () => {
@@ -29,15 +32,24 @@ const ShoppingCart = () => {
         dispatch({ type: Types.CLEAN_CART, payload: data })
 
     }
+    const hacerPedido = () => {
+        let pedido = "https://api.whatsapp.com/send?phone=573212079857&text="
+        const enviar = document.querySelector("#enviar")
+        cart.forEach(element => {
+            pedido += `${element.amount}%20${element.name}%20${element.value*element.amount}%0A`
+        });
+        pedido += `total%20${total}$`
+        enviar.setAttribute("href", pedido)
+        enviar.click()
+    }
     return (
         <div>
             <div className='shoppingCart'>
-                {cart.length?<div>{cart.length}</div>:<div></div>}
+                {cart.length ? <div>{cart.length}</div> : <div></div>}
                 <Button variant="primary" onClick={handleShow} >
                     <FontAwesomeIcon icon={faCartShopping} />
                 </Button>
             </div>
-            <h3>Menú</h3>
             <article>
                 <div className='container'>
                     <div className='wrapper'>
@@ -67,12 +79,18 @@ const ShoppingCart = () => {
                                 {cart.map((item, index) => (<CartItem data={item} delToCart={delToCart} key={index} />))}
                             </tbody>
                         </table>
-                        {total ? <h3>total {total} $</h3> : <></>}
+                        {total ?
+                            <div className='left'>
+                                <h3>Total {total} $</h3>
+                                <Button variant="success"><Link to="../pedido" state={{cart:cart, total:total}} >Hacer pedido</Link></Button>
+                                
+                            </div> : <></>}
+                            <a id="enviar"></a>
 
                     </Offcanvas.Body>
                 </Offcanvas>
             </>
-
+            
         </div>
     )
 }
