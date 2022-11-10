@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Matuparo/static/css/main.3e7d2809.css",
-    "main.js": "/Matuparo/static/js/main.0a1b8fa3.js",
+    "main.js": "/Matuparo/static/js/main.e7554709.js",
     "static/media/DSCN0289.JPG": "/Matuparo/static/media/DSCN0289.30f307a564c4f0f4b53f.JPG",
     "static/media/welcome.jpg": "/Matuparo/static/media/welcome.30f307a564c4f0f4b53f.jpg",
     "static/media/DSCN0504.JPG": "/Matuparo/static/media/DSCN0504.aef8b80913bb62096296.JPG",
@@ -30,10 +30,10 @@
     "static/media/matuparo(19).jpg": "/Matuparo/static/media/matuparo(19).2225e048f97f3802ee89.jpg",
     "index.html": "/Matuparo/index.html",
     "main.3e7d2809.css.map": "/Matuparo/static/css/main.3e7d2809.css.map",
-    "main.0a1b8fa3.js.map": "/Matuparo/static/js/main.0a1b8fa3.js.map"
+    "main.e7554709.js.map": "/Matuparo/static/js/main.e7554709.js.map"
   },
   "entrypoints": [
     "static/css/main.3e7d2809.css",
-    "static/js/main.0a1b8fa3.js"
+    "static/js/main.e7554709.js"
   ]
 }
