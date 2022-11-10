@@ -131,21 +131,21 @@ export default [
         img: img17,
         name: "Perro con tocineta",
         value:12000,
-        description:"Pan artesanal, salchicha premium, papá fósforo, queso, piña, huevo de codorniz, tocineta, salsas."
+        description:"Pan artesanal, salchicha premium, papa fósforo, queso, piña, huevo de codorniz, tocineta, salsas."
     },
     {
         id:18,
         img: img18,
         name: "Perro caliente especial",
         value:9000,
-        description:"Pan artesanal, salchicha premium, papá fósforo, queso, piña, huevo de codorniz, salsas."
+        description:"Pan artesanal, salchicha premium, papa fósforo, queso, piña, huevo de codorniz, salsas."
     },
     {
         id:19,
         img: img19,
         name: "Perro caliente sencillo",
         value:7000,
-        description:"Pan artesanal, salchicha zenu long, papá fósforo, queso, piña, salsas."
+        description:"Pan artesanal, salchicha zenu long, papa fósforo, queso, piña, salsas."
     },
     {
         id:20,
