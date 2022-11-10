@@ -129,9 +129,9 @@ export default [
     {
         id:17,
         img: img17,
-        name: "Perro con tosineta",
+        name: "Perro con tocineta",
         value:12000,
-        description:"Pan artesanal, salchicha premium, papá fósforo, queso, piña, huevo de codorniz, tosineta, salsas."
+        description:"Pan artesanal, salchicha premium, papá fósforo, queso, piña, huevo de codorniz, tocineta, salsas."
     },
     {
         id:18,
